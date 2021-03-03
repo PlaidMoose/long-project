@@ -1,0 +1,40 @@
+{
+  "name": "long-project",
+  "version": "1.0.0",
+  "description": "long project",
+  "main": "index.js",
+  "scripts": {
+    "watch": "tsc -w",
+    "dev": "nodemon dist/index.js",
+    "start": "node dist/index.js",
+    "start2": "ts-node scr/index.ts ",
+    "dev2": "nodemon --exec ts-node scr/index.ts "
+  },
+  "repository": "git+https://github.com/PlaidMoose/long-project.git",
+  "keywords": [],
+  "author": "PlaidMoose <79758282+PlaidMoose@users.noreply.github.com",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/PlaidMoose/long-project/issues"
+  },
+  "homepage": "https://github.com/PlaidMoose/long-project#readme",
+  "devDependencies": {
+    "nodemon": "^2.0.7",
+    "ts-node": "^9.1.1"
+  },
+  "private": null,
+  "dependencies": {
+    "@mikro-orm/cli": "^4.4.4",
+    "@mikro-orm/core": "^4.4.4",
+    "@mikro-orm/migrations": "^4.4.4",
+    "@mikro-orm/postgresql": "^4.4.4",
+    "pg": "^8.5.1"
+  },
+  "mikro-orm": {
+    "useTsNode": true,
+    "configPaths": [
+      "./scr/mikro-orm.config.ts",
+      "./dist/mikro-orm.config.js"
+    ]
+  }
+}
